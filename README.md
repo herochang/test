@@ -22,13 +22,13 @@ On linux and MacOS
 
 Example:
 
-export MAC_ADDRESS_IO_API_KEY=at_VKIvhPfcPffhywNDMx61r0E1gAhKW
+**export MAC_ADDRESS_IO_API_KEY=at_VKIvhPfcPffhywNDMx61r0E1gAhKW**
 
 
 
 Basic run
 
-./mac_lookup.py 44:38:39:ff:ef:57
+    ./mac_lookup.py 44:38:39:ff:ef:57
 
 This should give output of the company name. For the above example it would show:
 
@@ -37,11 +37,11 @@ Cumulus Networks, Inc
 Complete information run
 Example:
 
-./mac_lookup.py 44:38:39:ff:ef:57 -r
+    ./mac_lookup.py 44:38:39:ff:ef:57 -r
 
 Output:
 
-{"vendorDetails":{"oui":"443839","isPrivate":false,"companyName":"Cumulus Networks, Inc","companyAddress":"650 Castro Street, suite 120-245 Mountain View CA 94041 US","countryCode":"US"},"blockDetails":{"blockFound":true,"borderLeft":"443839000000","borderRight":"443839FFFFFF","blockSize":16777216,"assignmentBlockSize":"MA-L","dateCreated":"2012-04-08","dateUpdated":"2015-09-27"},"macAddressDetails":{"searchTerm":"44:38:39:ff:ef:57","isValid":true,"virtualMachine":"Not detected","applications":["Multi-Chassis Link Aggregation (Cumulus Linux)"],"transmissionType":"unicast","administrationType":"UAA","wiresharkNotes":"No details","comment":""}}
+    {"vendorDetails":{"oui":"443839","isPrivate":false,"companyName":"Cumulus Networks, Inc","companyAddress":"650 Castro Street, suite 120-245 Mountain View CA 94041 US","countryCode":"US"},"blockDetails":{"blockFound":true,"borderLeft":"443839000000","borderRight":"443839FFFFFF","blockSize":16777216,"assignmentBlockSize":"MA-L","dateCreated":"2012-04-08","dateUpdated":"2015-09-27"},"macAddressDetails":{"searchTerm":"44:38:39:ff:ef:57","isValid":true,"virtualMachine":"Not detected","applications":["Multi-Chassis Link Aggregation (Cumulus Linux)"],"transmissionType":"unicast","administrationType":"UAA","wiresharkNotes":"No details","comment":""}}
 
 
 ## Running with Docker
