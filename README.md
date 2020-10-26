@@ -59,3 +59,7 @@ Example:
 
 
 ## Security
+
+Although the docker image build process does have an optional parameter to bake the MAC_ADDRESS_IO_API_KEY key during the build process, but this is not very safe.
+So this is only used to build the image locally.
+
