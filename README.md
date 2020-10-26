@@ -16,9 +16,10 @@ All you need to get started is sign up for an account here and obtain your API k
 Using this tool requires signing up for a macaddress.io account and getting an API key here.
 Export the API key as an environment variable MAC_ADDRESS_IO_API_KEY before running the script.
 
-macOS and Linux
-export MAC_ADDRESS_IO_API_KEY="your-api-key"
 On linux and MacOS
+
+export MAC_ADDRESS_IO_API_KEY="your-api-key"
+
 
 Example:
 
@@ -30,11 +31,12 @@ Basic run
 
     ./mac_lookup.py 44:38:39:ff:ef:57
 
-This should give output of the company name. For the above example it would show:
+This should give output of the company name:
 
-Cumulus Networks, Inc
+    Cumulus Networks, Inc
 
 Complete information run
+
 Example:
 
     ./mac_lookup.py 44:38:39:ff:ef:57 -r
@@ -53,6 +55,7 @@ You can build docker image with the Dockerfile.
 After build you can use docker run as follows:
 
 docker run --env MAC_ADDRESS_IO_API_KEY=key <image_name> mac_lookup.py <MAC_ADDRESS> 
+
 Example:
 
         docker run --env MAC_ADDRESS_IO_API_KEY=$API_KEY herochang/test:latest mac_lookup.py 44:38:39:ff:ef:57
