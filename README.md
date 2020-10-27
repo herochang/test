@@ -8,8 +8,8 @@ The python script can be used to query https://macaddress.io/ to get vendor rela
 
 ### Prepare：
 
-You need a standard installation of Python3 that can be obtained here
-All you need to get started is sign up for an account here and obtain your API key.
+You need a standard installation of Python3 that can be obtained here.
+And you need to get started is sign up for a macaddress.io account and obtain your API key.
 
 ### Usage
 
@@ -49,7 +49,6 @@ Output:
 ## Running with Docker
 
 You can build docker image with the Dockerfile.
-
 
 
 After build you can use docker run as follows:
