@@ -66,11 +66,14 @@ def formatted_output(response):
 
 class bcolors:
     OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
     ENDC = '\033[0m'
 
     def disable(self):
-
         self.OKGREEN = ''
+        self.WARNING = ''
+        self.FAIL = ''
         self.ENDC = ''
 
 def main():
@@ -101,16 +104,19 @@ def main():
         logging.error("Please set the environment variable MAC_ADDRESS_IO_API_KEY")
         sys.exit(1)
     if not validate_macaddress(mac_address):
-        logging.error("Could not validate mac_address")
+        logging.error("Mac_address is invalid")
         sys.exit(1)
     response = get_response(request_url(mac_address, api_key))
+
     if args.rawjson:
         print(response)
         sys.exit(0)
-
-    print (bcolors.OKGREEN + formatted_output(response)+ bcolors.ENDC)
+    name_output = formatted_output(response)
+    if len(name_output.strip()) == 0:
+        print (bcolors.WARNING + "Not found companyName"+ bcolors.ENDC)
+    else:
+        print (bcolors.OKGREEN + name_output+ bcolors.ENDC)
 
 
 if __name__ == "__main__":
     main()
-
